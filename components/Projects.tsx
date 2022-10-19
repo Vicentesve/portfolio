@@ -23,11 +23,11 @@ function Projects({ projects }: Props) {
       <div className="relative z-20 flex w-full h-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
         {projects?.map((project, i) => (
           <div
-            className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-full p-20 space-y-5 snap-center md:p-44"
+            className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-full p-10 space-y-5 snap-center md:p-20 lg:p-36"
             key={project._id}
           >
             <a
-              className="h-[60%] flex justify-center"
+              className="md:h-[60%] flex justify-center"
               href={project.linkToBuild}
             >
               <motion.img
@@ -35,7 +35,7 @@ function Projects({ projects }: Props) {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="h-full"
+                className="object-contain h-full "
                 src={urlFor(project.image).url()}
                 alt=""
               />
@@ -61,7 +61,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="w-full text-sm text-center md:text-lg md:text-left">
                 {project.summary}
               </p>
             </div>
