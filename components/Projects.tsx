@@ -49,7 +49,7 @@ function Projects({ projects }: Props) {
                 {project.title}
               </h4>
 
-              <div className="flex items-center justify-center space-x-5">
+              {/* <div className="flex items-center justify-center space-x-5">
                 {project?.technologies?.map((technology) => (
                   <motion.img
                     key={technology._id}
@@ -59,7 +59,7 @@ function Projects({ projects }: Props) {
                     className="object-cover w-10 h-10 rounded-full"
                   />
                 ))}
-              </div>
+              </div> */}
 
               <p className="text-lg text-center md:text-left">
                 {project.summary}
