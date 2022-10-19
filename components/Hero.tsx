@@ -19,7 +19,7 @@ export default function Hero({ pageInfo }: Props) {
       {/* Hero Picture */}
       <motion.img
         className="relative object-cover mx-auto rounded-full"
-        src={urlFor(pageInfo?.heroImage).url() || ""}
+        src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         width="130"
         height="130"
