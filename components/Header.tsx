@@ -29,7 +29,7 @@ export default function Header({ socials }: Props) {
         }}
         className="flex items-center"
       >
-        {socials.map((social) => (
+        {socials?.map((social) => (
           <SocialIcon
             key={social._id}
             url={social.url}
