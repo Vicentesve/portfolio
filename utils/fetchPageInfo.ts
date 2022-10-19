@@ -11,12 +11,8 @@ export const fetchPageInfo = async () => {
     }
   );
 
-  try {
-    const data = await res.json();
-    const pageInfo: PageInfo = data.pageInfo;
+  const data = await res.json();
+  const pageInfo: PageInfo = data.pageInfo;
 
-    return pageInfo;
-  } catch (err) {
-    console.log("err: ", err);
-  }
+  return pageInfo;
 };
