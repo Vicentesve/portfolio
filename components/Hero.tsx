@@ -15,16 +15,15 @@ export default function Hero({ pageInfo }: Props) {
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-8 overflow-hidden text-center">
       <BackGroundCircles />
-
       {/* Hero Picture */}
-      {/* <motion.img
+      <motion.img
         className="relative object-cover mx-auto rounded-full"
         src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         width="130"
         height="130"
-      /> */}
-
+      />{" "}
+      *
       <div className="z-20">
         {/* Titles */}
         <h2 className="text-sm uppercase text-gray-500 tracking-[15px]">
