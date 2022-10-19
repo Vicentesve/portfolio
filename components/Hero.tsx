@@ -22,8 +22,7 @@ export default function Hero({ pageInfo }: Props) {
         alt=""
         width="130"
         height="130"
-      />{" "}
-      *
+      />
       <div className="z-20">
         {/* Titles */}
         <h2 className="text-sm uppercase text-gray-500 tracking-[15px]">
