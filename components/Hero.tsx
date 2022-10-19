@@ -17,13 +17,13 @@ export default function Hero({ pageInfo }: Props) {
       <BackGroundCircles />
 
       {/* Hero Picture */}
-      <motion.img
+      {/* <motion.img
         className="relative object-cover mx-auto rounded-full"
         src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         width="130"
         height="130"
-      />
+      /> */}
 
       <div className="z-20">
         {/* Titles */}

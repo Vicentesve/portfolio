@@ -21,7 +21,7 @@ export default function About({ pageInfo }: Props) {
       </h3>
 
       <div className="flex flex-col items-center h-full p-10 mx-auto space-x-5 max-w-7xl md:flex-row">
-        <motion.img
+        {/* <motion.img
           src={urlFor(pageInfo?.profilePic).url()}
           initial={{
             x: -200,
@@ -35,7 +35,7 @@ export default function About({ pageInfo }: Props) {
           transition={{ duration: 1.2 }}
           className="flex-shrink-0 object-cover w-56 h-56 rounded-full  md:rounded-lg 
         md:w-64 md:h-96 xl:w-[500px] xl:h-[500px]"
-        />
+        /> */}
         <div className="mt-10">
           <h4 className="text-4xl font-semibold">
             Here is a{" "}

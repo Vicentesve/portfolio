@@ -30,7 +30,7 @@ function Projects({ projects }: Props) {
               className="h-[60%] flex justify-center"
               href={project.linkToBuild}
             >
-              <motion.img
+              {/* <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ function Projects({ projects }: Props) {
                 className="h-full"
                 src={urlFor(project.image).url()}
                 alt=""
-              />
+              /> */}
             </a>
 
             <div className="max-w-6xl space-y-10 md:px-10">
