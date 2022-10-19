@@ -41,7 +41,7 @@ function Projects({ projects }: Props) {
               />
             </a>
 
-            <div className="max-w-6xl space-y-10 md:px-10">
+            <div className="max-w-6xl space-y-5 sm:space-y-10 md:px-10">
               <h4 className="text-2xl font-semibold text-center md:text-4xl">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}:
@@ -56,7 +56,7 @@ function Projects({ projects }: Props) {
                     src={urlFor(technology?.image).url()}
                     alt=""
                     width="35"
-                    className="object-cover w-10 h-10 rounded-full"
+                    className="object-cover w-6 h-6 rounded-full sm:w-10 sm:h-10"
                   />
                 ))}
               </div>

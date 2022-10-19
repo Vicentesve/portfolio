@@ -16,24 +16,28 @@ function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center bg-white"
+        className="w-28 h-28 sm:w-32 sm:h-32 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center bg-white"
         src={urlFor(experience?.companyImage).url()}
         alt=""
       />
 
       <div className="px-0 md:px-10 ">
-        <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
-        <p className="mt-1 text-2xl font-semibold">{experience?.company}</p>
+        <h4 className="text-2xl font-light sm:text-4xl">
+          {experience?.jobTitle}
+        </h4>
+        <p className="mt-1 text-xl font-semibold sm:text-2xl">
+          {experience?.company}
+        </p>
         <div className="flex my-2 space-x-2">
           {experience?.technologies?.map((techImage) => (
             <motion.img
               key={techImage._id}
-              className="object-cover w-8 h-8 bg-white rounded-full"
+              className="object-cover w-5 h-5 bg-white rounded-full sm:w-8 sm:h-8"
               src={urlFor(techImage.image).url()}
             />
           ))}
         </div>
-        <p className="pb-5 text-gray-300 uppercase ">
+        <p className="pb-5 text-sm text-gray-300 uppercase sm:text-base ">
           {new Date(experience.dataStarted).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
@@ -47,7 +51,7 @@ function ExperienceCard({ experience }: Props) {
               })}
         </p>
 
-        <ul className="ml-5 text-lg list-disc">
+        <ul className="ml-5 list-disc md:text-lg">
           {experience?.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

@@ -37,25 +37,26 @@ function ContactMe({ pageInfo }: Props) {
       </h3>
 
       <div className="flex flex-col items-center justify-center h-full space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
-          I have just what you need.{" "}
+        <h4 className="text-2xl font-semibold text-center sm:text-4xl">
+          I have just what you need.
+          <br />
           <span className="deoration-[#F7AB0A]/50 underline">Let´s Talk</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-5 sm:space-y-10">
           <div className="flex items-center justify-center space-x-5">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
+            <PhoneIcon className="text-[#F7AB0A] w-6 h-6 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-lg sm:text-2xl">{pageInfo?.phoneNumber}</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.email}</p>
+            <EnvelopeIcon className="text-[#F7AB0A] w-6 h-6 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-lg sm:text-2xl">{pageInfo?.email}</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.address}</p>
+            <MapPinIcon className="text-[#F7AB0A] w-6 h-6 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-lg sm:text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
 
@@ -93,7 +94,7 @@ function ContactMe({ pageInfo }: Props) {
 
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg w-full"
+            className="bg-[#F7AB0A] py-3 px-5 sm:py-5 sm:px-10 rounded-md text-black font-bold text-lg w-full"
           >
             Submit
           </button>
