@@ -2,11 +2,10 @@ import Image from "next/image";
 import React from "react";
 import Typewriter from "typewriter-effect";
 import BackGroundCircles from "./BackGroundCircles";
-import profile_pic from "../public/profile_pic.png";
-import pp from "../public/pp.png";
 import Link from "next/link";
 import { PageInfo } from "../typing";
 import { urlFor } from "../sanity";
+import { motion } from "framer-motion";
 
 type Props = {
   pageInfo: PageInfo;
@@ -18,10 +17,8 @@ export default function Hero({ pageInfo }: Props) {
       <BackGroundCircles />
 
       {/* Hero Picture */}
-      <Image
+      <motion.img
         className="relative object-cover mx-auto rounded-full"
-        loader={() => urlFor(pageInfo?.heroImage).url()}
-        unoptimized={true}
         src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         width="130"

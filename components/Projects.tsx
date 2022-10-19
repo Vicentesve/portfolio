@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typing";
 import { urlFor } from "../sanity";
-import Image from "next/image";
 
 type Props = {
   projects: Project[];
