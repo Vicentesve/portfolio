@@ -13,8 +13,6 @@ type Props = {
 };
 
 export default function Hero({ pageInfo }: Props) {
-  // const src_heroImage = urlFor(pageInfo?.heroImage).url();
-
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-8 overflow-hidden text-center">
       <BackGroundCircles />
@@ -22,9 +20,9 @@ export default function Hero({ pageInfo }: Props) {
       {/* Hero Picture */}
       <Image
         className="relative object-cover mx-auto rounded-full"
-        /* loader={() => src_heroImage} */
+        loader={() => urlFor(pageInfo?.heroImage).url()}
         unoptimized={true}
-        src="/hero_photo.jpg"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         width="130"
         height="130"
