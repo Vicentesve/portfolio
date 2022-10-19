@@ -21,7 +21,7 @@ function Projects({ projects }: Props) {
       </h3>
 
       <div className="relative z-20 flex w-full h-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
             className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-full p-20 space-y-5 snap-center md:p-44"
             key={project._id}
