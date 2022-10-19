@@ -17,14 +17,14 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
-  pageInfo: PageInfo;
   experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+const Home = ({ experiences, skills, projects, socials }: Props) => {
+  const pageInfo;
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden">
       <Head>
@@ -84,7 +84,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      pageInfo,
       experiences,
       skills,
       projects,
